@@ -1,3 +1,6 @@
+using Application.Activities;
+using Application.Core;
+using Application.Items;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 
@@ -19,7 +22,8 @@ builder.Services.AddCors(opt =>{
         policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
     });
 });
-
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(List.Handler).Assembly));
+builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
