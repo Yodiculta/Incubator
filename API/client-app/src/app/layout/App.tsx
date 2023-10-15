@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Container, List } from 'semantic-ui-react';
 import { Activity } from '../models/activity';
 import Header from './Header';
+import ItemsDashboard from '../../features/items/dashboard/ItemsDashboard';
 function App() {
   const [items, setItems] = useState<Activity[]>([]);
 
@@ -18,11 +19,7 @@ function App() {
     <div>
       <Header />
       <Container style = {{marginTop: "7em"}}>
-        <List>
-          {items.map((item) => (
-            <List.Item key={item.id}>{item.title}</List.Item>
-          ))}
-        </List>
+        <ItemsDashboard items = {items}/>
       </Container>
 
     </div>
