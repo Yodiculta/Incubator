@@ -1,0 +1,33 @@
+body {
+    background-color: F8FDFF !important;
+}
+
+.ui.inverted.top.fixed.menu{
+    background-color: white ! important;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  color: rgba(55, 65, 117, 1);
+}
+.navigation-brand{
+    display: inline;
+    margin-right: 5;
+    color: rgba(55, 65, 117, 1);
+}
+  
+.navigation-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: rgba(55, 65, 117, 1);
+  }
+.menu-item {
+    color: rgba(55, 65, 117, 1);
+
+  }
